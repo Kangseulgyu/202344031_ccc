@@ -1,6 +1,6 @@
 # 202344031_ccc
 
-```
+```c
 #include <stdio.h>
 
 int main()
@@ -23,4 +23,4 @@ int main()
     printf("%f/%f=%f\n", x, y, result);
     return 0;
 }
-```
+```c
