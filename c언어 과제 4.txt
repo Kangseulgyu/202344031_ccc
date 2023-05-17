@@ -1,0 +1,10 @@
+#include <stdlib.h>
+#include <stdio.h>
+int main(void)
+{
+system("dir"); // 시스템에게 디렉토리 파일을 불러오기
+printf("아무 키나 치세요\n"); // 아무 키나 치세요 출력하기
+_getch(); // 입력 기다리기
+system("cls"); 시스템에게 화면 지우라하기
+return 0;
+}
