@@ -1,0 +1,17 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <math.h>
+#include <stdio.h>
+int main(void)
+{
+double height, distance, tree_height, degrees, radians; // 변수 h, d, t, d, r 선언하기
+printf("나무와의 길이(단위는 미터): "); // 나무와의 길이 출력하기
+scanf("%lf", &distance); // 거리 입력받기
+printf("측정자의 키(단위는 미터): "); // 측정자의 키 출력하기
+scanf("%lf", &height); // 키 입력받기
+printf("각도(단위는 도): "); // 각도 출력하기
+scanf("%lf", &degrees); // 각도 입력받기
+radians = degrees * (3.141592 / 180.0); // 변수 riaians를 degrees로 정의하기
+tree_height = tan(radians) * distance + height; // tan을 활용해 나무의 높이 구하기
+printf("나무의 높이(단위는 미터): %lf \n", tree_height); // 나무의 높이 출력하기
+return 0;
+}

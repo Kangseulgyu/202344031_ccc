@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <time.h>
+int main(void)
+{
+time_t start, end; // time_t는 unsigned long과 동일하다.
+start = time(NULL); // start변수에 현재시간 설정하기
+printf("10초가 되면 아무 키나 누르세요\n"); // 10초가 되면 아무 키나 누르세요 출력하기
+while (1) {
+if (getchar()) 
+break; // 입력 받으면 반복문 끝내기
+}
+printf("종료되었습니다.\n"); // 종료되었습니다 출력하기
+end = time(NULL); // end 변수에 현재시간 설정하기
+printf("경과된 시간은 %ld 초입니다. \n", end - start); // 경과된 시간 출력하기
+return 0;
+}
