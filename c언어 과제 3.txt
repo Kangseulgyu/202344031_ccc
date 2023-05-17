@@ -1,0 +1,12 @@
+#include <math.h>
+#include <stdio.h>
+int main( void )
+{ 
+double pi = 3.1415926535; // pi 값 설정하기
+double x, y; // 변수 x, y 선언하기
+x = pi / 2; // x에 pi/2값 설정하기
+y = sin( x ); //y에 sin(x)값 설정하기
+printf( "sin( %f ) = %f\n", x, y ); // sin(x)=y값 출력하기
+y = cos( x );  // y에 cos(x)값 설정하기 
+printf( "cos( %f ) = %f\n", x, y ); // cos(x)=y값 출력하기
+} 

@@ -1,0 +1,27 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <time.h>
+int coin_toss (void); // 동전 던지기 함수 선언하기
+int main(void)
+{
+int toss; // toss 변수 선언하기
+int heads = 0; // heads 변수 선언하기
+int tails = 0; // tail 변수 선언하기
+srand((unsigned)time(NULL)); // 난수의 시간을 현재시간으로 바꾸기
+for (toss = 0; toss < 100; toss++) 
+{
+if
+(coin_toss() == 1) // 동전 던지기 함수 결과
+heads++; // 동전의 앞면일 때 heads 변수 증가하기
+else
+tails++; // 동전의 뒷면일 때 tails 변수 증가하기
+}
+printf("동전의 앞면: %d \n", heads); // 동전의 앞면 개수 출력하기
+printf("동전의 뒷면: %d \n", tails); // 동전의 뒷면 개수 출력하기
+return 0; // void 값 반환
+}
+int coin_toss( void )
+{
+int head = rand() % 2; // 나눈 나머지 값 0 또는 1의 값을 무작위로 선택하여 head 변수에 입력하기 
+return head;
+}
